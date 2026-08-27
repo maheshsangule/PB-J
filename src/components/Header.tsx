@@ -39,42 +39,42 @@ export const Header: React.FC<HeaderProps> = ({
   }, [announcements.length]);
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-xs">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200/80">
       {/* TOP ANNOUNCEMENT BAR */}
-      <div className="bg-[#606041] text-white py-2 px-4 text-center text-xs font-semibold tracking-wider transition-all flex items-center justify-center gap-2">
-        <span className="material-symbols-outlined text-sm hidden sm:inline">local_shipping</span>
-        <span className="transition-opacity duration-300">
+      <div className="bg-[#111111] text-white py-1.5 px-4 text-center text-[10px] font-light tracking-[0.15em] uppercase flex items-center justify-center gap-2">
+        <span className="material-symbols-outlined text-xs hidden sm:inline text-gray-400">local_shipping</span>
+        <span className="transition-opacity duration-300 text-gray-200">
           {announcements[announcementIndex]}
         </span>
       </div>
 
       {/* MAIN NAVBAR */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           
           {/* Mobile Hamburger & Search Trigger */}
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex items-center gap-1.5 lg:hidden">
             <button
               id="mobile-nav-toggle-btn"
               type="button"
               onClick={onOpenMobileNav}
-              className="p-2 text-gray-800 hover:text-black focus:outline-hidden"
+              className="p-1.5 text-gray-700 hover:text-black focus:outline-hidden"
               aria-label="Open Mobile Menu"
             >
-              <span className="material-symbols-outlined text-2xl">menu</span>
+              <span className="material-symbols-outlined text-xl">menu</span>
             </button>
             <button
               id="mobile-search-btn"
               type="button"
               onClick={onOpenSearch}
-              className="p-2 text-gray-800 hover:text-black focus:outline-hidden"
+              className="p-1.5 text-gray-700 hover:text-black focus:outline-hidden"
               aria-label="Search"
             >
-              <span className="material-symbols-outlined text-2xl">search</span>
+              <span className="material-symbols-outlined text-xl">search</span>
             </button>
           </div>
 
-          {/* BRAND LOGO */}
+          {/* BRAND LOGO - Clean layout, zero gap above */}
           <div className="flex-shrink-0 flex items-center">
             <button
               id="brand-home-link-btn"
@@ -83,19 +83,19 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('all');
               }}
-              className="text-left group"
+              className="text-left group flex flex-col justify-center py-1"
             >
-              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#1C1C1C] block group-hover:opacity-80 transition-opacity">
+              <span className="text-base sm:text-lg font-normal tracking-[0.2em] text-[#111111] uppercase group-hover:opacity-70 transition-opacity leading-none">
                 PB &amp; J
               </span>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-[#606041] block -mt-1 font-sans font-semibold">
+              <span className="text-[8px] uppercase tracking-[0.25em] text-gray-500 font-light mt-1 leading-none">
                 Pure Fabric &bull; Modern Fit
               </span>
             </button>
           </div>
 
           {/* DESKTOP MAIN NAVIGATION */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-7">
             <button
               id="nav-cat-all-btn"
               type="button"
@@ -103,10 +103,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('all');
               }}
-              className={`text-xs uppercase font-bold tracking-widest py-2 transition-all border-b-2 ${
+              className={`text-[11px] uppercase font-light tracking-[0.18em] py-2 transition-all border-b ${
                 currentCategory === 'all' && activeView === 'store'
-                  ? 'border-black text-black'
-                  : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
+                  ? 'border-black text-black font-normal'
+                  : 'border-transparent text-gray-500 hover:text-black hover:border-gray-300'
               }`}
             >
               All Essentials
@@ -118,10 +118,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('shirts');
               }}
-              className={`text-xs uppercase font-bold tracking-widest py-2 transition-all border-b-2 ${
+              className={`text-[11px] uppercase font-light tracking-[0.18em] py-2 transition-all border-b ${
                 currentCategory === 'shirts' && activeView === 'store'
-                  ? 'border-black text-black'
-                  : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
+                  ? 'border-black text-black font-normal'
+                  : 'border-transparent text-gray-500 hover:text-black hover:border-gray-300'
               }`}
             >
               Shirts
@@ -133,10 +133,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('pyjamas');
               }}
-              className={`text-xs uppercase font-bold tracking-widest py-2 transition-all border-b-2 ${
+              className={`text-[11px] uppercase font-light tracking-[0.18em] py-2 transition-all border-b ${
                 currentCategory === 'pyjamas' && activeView === 'store'
-                  ? 'border-black text-black'
-                  : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
+                  ? 'border-black text-black font-normal'
+                  : 'border-transparent text-gray-500 hover:text-black hover:border-gray-300'
               }`}
             >
               Pyjamas
@@ -148,10 +148,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('boxers');
               }}
-              className={`text-xs uppercase font-bold tracking-widest py-2 transition-all border-b-2 ${
+              className={`text-[11px] uppercase font-light tracking-[0.18em] py-2 transition-all border-b ${
                 currentCategory === 'boxers' && activeView === 'store'
-                  ? 'border-black text-black'
-                  : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
+                  ? 'border-black text-black font-normal'
+                  : 'border-transparent text-gray-500 hover:text-black hover:border-gray-300'
               }`}
             >
               Boxers
@@ -163,10 +163,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('lounge-pants');
               }}
-              className={`text-xs uppercase font-bold tracking-widest py-2 transition-all border-b-2 ${
+              className={`text-[11px] uppercase font-light tracking-[0.18em] py-2 transition-all border-b ${
                 currentCategory === 'lounge-pants' && activeView === 'store'
-                  ? 'border-black text-black'
-                  : 'border-transparent text-gray-600 hover:text-black hover:border-gray-300'
+                  ? 'border-black text-black font-normal'
+                  : 'border-transparent text-gray-500 hover:text-black hover:border-gray-300'
               }`}
             >
               Lounge Pants
@@ -178,23 +178,23 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectCategory('all');
               }}
-              className="text-xs uppercase font-bold tracking-widest py-2 text-[#BA1A1A] hover:text-red-700 flex items-center gap-1"
+              className="text-[11px] uppercase font-medium tracking-[0.18em] py-2 text-rose-700 hover:text-rose-900 flex items-center gap-1.5"
             >
               <span>Sale 50% Off</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#BA1A1A]"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
             </button>
           </nav>
 
           {/* DESKTOP RIGHT ACTIONS */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <button
               id="desktop-search-btn"
               type="button"
               onClick={onOpenSearch}
-              className="hidden lg:flex items-center gap-1 text-xs uppercase font-semibold tracking-wider text-gray-700 hover:text-black p-2"
+              className="hidden lg:flex items-center gap-1.5 text-[11px] uppercase font-light tracking-[0.18em] text-gray-600 hover:text-black p-1.5 transition-colors"
               aria-label="Search Catalog"
             >
-              <span className="material-symbols-outlined text-xl">search</span>
+              <span className="material-symbols-outlined text-lg">search</span>
               <span>Search</span>
             </button>
 
@@ -206,7 +206,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onSelectView('store');
                 onSelectProduct('pb-01');
               }}
-              className="hidden sm:inline-flex text-[11px] font-bold uppercase tracking-wider px-3 py-1.5 bg-[#F5F5F0] hover:bg-[#EBEBE5] text-[#1C1C1C] border border-gray-300"
+              className="hidden sm:inline-flex text-[10px] font-normal uppercase tracking-[0.18em] px-3 py-1.5 bg-[#F4F4F0] hover:bg-[#EAEAE4] text-[#111111] border border-gray-200 transition-colors"
             >
               Featured PDP
             </button>
@@ -216,17 +216,17 @@ export const Header: React.FC<HeaderProps> = ({
               id="shopping-bag-btn"
               type="button"
               onClick={onOpenCart}
-              className="relative p-2 text-gray-900 hover:text-black flex items-center gap-1.5 group"
+              className="relative p-1.5 text-gray-800 hover:text-black flex items-center gap-1 group transition-colors"
               aria-label="View Shopping Bag"
             >
-              <span className="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-xl group-hover:scale-105 transition-transform">
                 shopping_bag
               </span>
-              <span className="hidden md:inline text-xs font-bold uppercase tracking-wider">
+              <span className="hidden md:inline text-[11px] font-light uppercase tracking-[0.18em]">
                 Bag
               </span>
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 md:-top-1 md:-right-2 bg-[#1C1C1C] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center ring-2 ring-white">
+                <span className="bg-[#111111] text-white text-[9px] font-medium w-4 h-4 rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}

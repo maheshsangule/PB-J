@@ -22,7 +22,7 @@ export const MobileNavDrawer: React.FC<MobileNavDrawerProps> = ({
       name: 'Shirts',
       badge: 'Bestselling',
       image:
-        'https://lh3.googleusercontent.com/aida/AEtjO1XpLIYa-vBKs7qHXqC6rJ7WgmwxyqL2vHAg5KGanCMHzGSbqatm4kShwtbpXyKFq_A8HTgGy3eED1D9cxus9iFnWeXMTGtVj_PsyX8kYbAKbGxFOjKMz1dgNhRMisHgV_pDnlBJAoxB7GrzfqKoqh5_qrwnPj9q2S34vT-JgsuRMRZKNjXyOGuu-65wRT1M3Y0LT5bTlPMDt20uKpLFwN6axRDPhHS-FVOkjiCPmxM2c5p9b7XiXSuCCuk',
+        'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=1000',
       count: '24 Styles'
     },
     {
@@ -30,7 +30,7 @@ export const MobileNavDrawer: React.FC<MobileNavDrawerProps> = ({
       name: 'Pyjamas & Sets',
       badge: 'Mulberry Silk',
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuCWVzsrHs15fZCCpwsUNYFUpW7wzprwxLg7VASDwBcHLJKF7xZKUnUuxgYUoGFmne3u0jk6FB4uUpWYzSttnfLyBFJiaTrKt6Xd1PXIDrw17YzKKdGZLfHzB96OeZRrGK9s74xN76MXI2lmpHYJPiCm5quQ3hEow_lSs435QvPtSBUCKuZe-wpvXnLUnpPoCtSjlMK-qn-nmx8tzOoo2fbDNyE_QB7qnvQTeNuNZoKSOel0u44qf6vh',
+        'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&q=80&w=1000',
       count: '16 Styles'
     },
     {
@@ -38,7 +38,7 @@ export const MobileNavDrawer: React.FC<MobileNavDrawerProps> = ({
       name: 'Cotton Boxers',
       badge: 'From ₹399',
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuALMwmxfJ2D0kcRxq2GjPHYJOWHoVpAX2z4K4bzhEChZfvXyPswjHCorIUZ1T6Q4_dsZljkMZwB-5bJDvBhj0TG3heiYBvptZHds6EKa33CuR8I3Hifv0DSn9KJdgduExJDs6bBDBKtvvU9EfdxsdN0uVze7uIlQLX_ELaI_t-RKGBmOOqYWeTewWVIRdI4WGEx_Q8uMs80vNpysR43B8w-HDJS0XBnWy7zdktw4_6MbHKkenSoDFL9',
+        'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&q=80&w=1000',
       count: '12 Packs'
     },
     {
@@ -46,7 +46,7 @@ export const MobileNavDrawer: React.FC<MobileNavDrawerProps> = ({
       name: 'Lounge Pants',
       badge: 'French Linen',
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuCpe-sDs_e1hgySzCStPJ_N6YwHgDfux8r2zpCBX27pb5UJAO6br93ptuFwEaqo1B8EzdY91NMNZVIc62qukvZNFsFrCrTUIXto_5idfbPHx94EeeSrdZuaI0S94ohjokP1Q_DvWMXur_16YORfOhb-N5sJEdjtU5mU64p8zKpKrF3ZjdWlyyVYlm8Jc5YqgovLexoq9CgXOvR93UD7vxc2Ka6ekwvnH3mkCelSYgpzHnfmrIEenmX4',
+        'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&q=80&w=1000',
       count: '8 Styles'
     }
   ];
